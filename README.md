@@ -13,8 +13,6 @@ A complete full-stack web application for product ratings and reviews built with
 - ✅ Responsive design
 
 ### Bonus Features
-- ✅ Automatic tag extraction from reviews
-- ✅ Popular tags display
 - ✅ Review statistics
 - 🔄 Photo uploads (structure ready)
 
@@ -26,60 +24,13 @@ A complete full-stack web application for product ratings and reviews built with
 - MySQL
 - JWT Authentication
 - Joi Validation
-- Multer (for file uploads)
 
 ### Frontend
 - React 18
 - React Router
 - Axios
 - React Toastify
-- Lucide React (icons)
 
-## Project Structure
-
-\`\`\`
-ratings-review-system/
-├── backend/
-│   ├── config/
-│   │   └── database.js
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── productController.js
-│   │   └── reviewController.js
-│   ├── middleware/
-│   │   ├── auth.js
-│   │   └── validation.js
-│   ├── routes/
-│   │   ├── auth.js
-│   │   ├── products.js
-│   │   └── reviews.js
-│   ├── .env
-│   ├── package.json
-│   └── server.js
-├── frontend/
-│   ├── public/
-│   │   └── index.html
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Login.js
-│   │   │   ├── Register.js
-│   │   │   ├── Navbar.js
-│   │   │   ├── ProductList.js
-│   │   │   ├── ProductDetail.js
-│   │   │   ├── ReviewForm.js
-│   │   │   ├── ReviewList.js
-│   │   │   └── StarRating.js
-│   │   ├── context/
-│   │   │   └── AuthContext.js
-│   │   ├── App.js
-│   │   ├── index.js
-│   │   └── index.css
-│   └── package.json
-├── database/
-│   └── schema.sql
-├── package.json
-└── README.md
-\`\`\`
 
 ## Setup Instructions
 
@@ -205,11 +156,6 @@ npm start
 - Email: test@example.com
 - Password: password123
 
-### Sample Data
-The database comes pre-populated with:
-- 6 sample products
-- 1 test user account
-
 ## Development Commands
 
 \`\`\`bash
@@ -231,22 +177,6 @@ cd backend && npm run dev
 # Frontend development
 cd frontend && npm start
 \`\`\`
-
-## Production Deployment
-
-### Backend Deployment
-1. Set environment variables
-2. Install dependencies: `npm install`
-3. Start server: `npm start`
-
-### Frontend Deployment
-1. Build the app: `npm run build`
-2. Serve the build folder
-
-### Database
-- Ensure MySQL is running
-- Run the schema.sql file
-- Update connection credentials
 
 ## Features Implemented
 
@@ -270,83 +200,19 @@ cd frontend && npm start
 1. **Tag Extraction**
    - Automatic keyword extraction from reviews
    - Popular tags display
-   - Tag frequency counting
 
 2. **Photo Upload Structure**
    - Database schema supports image arrays
    - Backend multer configuration ready
    - Frontend structure prepared
 
-### ✅ Technical Requirements
-1. **Backend**: Node.js + Express.js ✅
-2. **Frontend**: React ✅
-3. **Database**: MySQL ✅
-4. **REST APIs**: Complete CRUD operations ✅
-
-## Security Features
-
-- JWT token authentication
-- Password hashing with bcrypt
-- Input validation and sanitization
-- Rate limiting
-- CORS protection
-- Helmet security headers
-
-## Troubleshooting
-
-### Common Issues
-
-1. **MySQL Connection Error**
-   \`\`\`bash
-   # Check if MySQL is running
-   brew services list | grep mysql
-   
-   # Start MySQL if not running
-   brew services start mysql
-   
-   # Check MySQL credentials
-   mysql -u root -p
-   \`\`\`
-
-2. **Port Already in Use**
-   \`\`\`bash
-   # Kill process on port 5000
-   lsof -ti:5000 | xargs kill -9
-   
-   # Kill process on port 3000
-   lsof -ti:3000 | xargs kill -9
-   \`\`\`
-
-3. **Database Schema Issues**
-   \`\`\`bash
-   # Drop and recreate database
-   mysql -u root -p -e "DROP DATABASE IF EXISTS ratings_review_db;"
-   mysql -u root -p < database/schema.sql
-   \`\`\`
-
-4. **JWT Token Issues**
-   - Ensure JWT_SECRET is set in .env
-   - Clear localStorage in browser
-   - Re-login to get new token
-
-### Environment Variables Check
-\`\`\`bash
-# Backend .env should contain:
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=your_password
-DB_NAME=ratings_review_db
-JWT_SECRET=your_secret_key
-PORT=5000
-\`\`\`
-
 ## Terminal Setup Commands for macOS
 
 \`\`\`bash
-# 1. Install Node.js (if not installed)
+# 1. Install Node.js 
 brew install node
 
-# 2. Install MySQL (if not installed)
+# 2. Install MySQL 
 brew install mysql
 brew services start mysql
 
@@ -370,16 +236,6 @@ cp backend/.env.example backend/.env
 # 8. Start the application
 npm run dev
 \`\`\`
-
-## VSCode Extensions Recommended
-
-- ES7+ React/Redux/React-Native snippets
-- Auto Rename Tag
-- Bracket Pair Colorizer
-- MySQL (by Jun Han)
-- Thunder Client (for API testing)
-- Prettier - Code formatter
-- ESLint
 
 ## API Testing
 
@@ -428,33 +284,7 @@ You can test the API endpoints using Thunder Client in VSCode or any REST client
    }
    \`\`\`
 
-## Future Enhancements
-
-- [ ] Photo upload functionality
-- [ ] Review sorting and filtering
-- [ ] User profile pages
-- [ ] Email notifications
-- [ ] Admin dashboard
-- [ ] Product search functionality
-- [ ] Review voting (helpful/not helpful)
-- [ ] Advanced analytics dashboard
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
 
 ## License
 
 This project is licensed under the MIT License.
-
-## Support
-
-For any issues or questions, please create an issue in the repository or contact the development team.
-
----
-
-**Happy Coding! 🚀**
