@@ -197,11 +197,7 @@ cd frontend && npm start
    - Frontend and backend validation
 
 ### ✅ Bonus Features
-1. **Tag Extraction**
-   - Automatic keyword extraction from reviews
-   - Popular tags display
-
-2. **Photo Upload Structure**
+1. **Photo Upload Structure**
    - Database schema supports image arrays
    - Backend multer configuration ready
    - Frontend structure prepared
