@@ -199,8 +199,6 @@ cd frontend && npm start
 ### ✅ Bonus Features
 1. **Photo Upload Structure**
    - Database schema supports image arrays
-   - Backend multer configuration ready
-   - Frontend structure prepared
 
 ## Terminal Setup Commands for macOS
 
