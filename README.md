@@ -278,7 +278,3 @@ You can test the API endpoints using Thunder Client in VSCode or any REST client
    }
    \`\`\`
 
-
-## License
-
-This project is licensed under the MIT License.
